@@ -53,9 +53,9 @@ app.layout = html.Div(children=[
 @app.callback(Output('figure-1', 'figure'),
              [Input('options-drop', 'value')])
 def make_figure(varname):
-    mygraphtitle = f'{varname} by country'
+    mygraphtitle = f'{varname} by country (bars, stripes and colors refers to the flag of each country)'
     mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
-    mycolorbartitle = "Count, Millions for Population"
+    mycolorbartitle = "Count or Millions for population variable"
 
     data=go.Choropleth(
         locations=df['name'], # Spatial coordinates
@@ -68,8 +68,8 @@ def make_figure(varname):
     fig.update_layout(
         title_text = mygraphtitle,
         geo_scope='world',
-        width=1200,
-        height=800
+        width=2000,
+        height=1200
     )
     return fig
 
