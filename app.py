@@ -68,8 +68,8 @@ def make_figure(varname):
     fig.update_layout(
         title_text = mygraphtitle,
         geo_scope='world',
-        width=2000,
-        height=1200
+        width=1500,
+        height=1000
     )
     return fig
 
