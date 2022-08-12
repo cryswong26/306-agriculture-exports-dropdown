@@ -54,7 +54,8 @@ app.layout = html.Div(children=[
              [Input('options-drop', 'value')])
 def make_figure(varname):
     mygraphtitle = f'{varname} by country (bars, stripes and colors refers to the flag of each country)'
-    mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
+    #mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
+    mycolorscale = 'Burg' # Note: The error message will list possible color scales.
     mycolorbartitle = "Count or Millions for population variable"
 
     data=go.Choropleth(
